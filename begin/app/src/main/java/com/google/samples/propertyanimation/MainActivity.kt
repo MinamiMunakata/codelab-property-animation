@@ -16,10 +16,12 @@
 
 package com.google.samples.propertyanimation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -70,6 +72,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rotater() {
+        val animator = ObjectAnimator.ofFloat(star, View.ROTATION, -360f, 0f)
+        animator.start()
     }
 
     private fun translater() {
